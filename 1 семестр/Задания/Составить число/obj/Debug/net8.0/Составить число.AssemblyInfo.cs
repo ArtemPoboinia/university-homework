@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Составить число")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+71004b1834b202dc512147ab2d027ae3d6d841f0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ec642f4fd784fae64bea888f4196848c2f869fad")]
 [assembly: System.Reflection.AssemblyProductAttribute("Составить число")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Составить число")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
