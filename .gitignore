@@ -1,0 +1,78 @@
+## Файлы сборки и выполнения ##
+bin/
+obj/
+*.exe
+*.dll
+*.pdb
+*.cache
+
+## Папка Visual Studio (полностью игнорируем) ##
+.vs/
+*.vspscc
+*.vssscc
+.vsconfig
+
+## Файлы пользовательских настроек ##
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+## Файлы отладки ##
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]uild/
+[Bb]uildOutput/
+[Tt]est[Rr]esult*/
+
+## NuGet пакеты ##
+[Nn]u[Gg]et/
+packages/
+*.nupkg
+packages-*.json
+project.assets.json
+
+## Файлы резервные и временные ##
+*.backup
+*.bak
+*.tmp
+*.temp
+*~
+_ReSharper*/
+*.resharper
+
+## Файлы покрытия тестов ##
+*.coverage
+*.coveragexml
+
+## Файлы Visual Studio Code (если используете) ##
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+## Файлы Rider (если используете) ##
+.idea/
+*.sln.iml
+
+## Системные файлы ##
+Thumbs.db
+.DS_Store
+Desktop.ini
+
+## Файлы специфичные для .NET Core/5/6/7/8+ ##
+**/.localhistory/
+
+## Файлы публикации ##
+publish/
+
+## Файлы анализатора ##
+**/analyzers.config.json

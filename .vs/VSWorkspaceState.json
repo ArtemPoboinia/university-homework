@@ -1,13 +1,11 @@
 {
   "ExpandedNodes": [
     "",
-    "\\1 семестр",
-    "\\1 семестр\\Доп задания",
-    "\\1 семестр\\Доп задания\\Календарь на месяц",
-    "\\1 семестр\\Доп задания\\Точка в треугольнике",
-    "\\1 семестр\\Задания",
-    "\\1 семестр\\Задания\\Составить число"
+    "\\semester-1",
+    "\\semester-1\\additional-tasks",
+    "\\semester-1\\tasks",
+    "\\semester-1\\tasks\\create-number"
   ],
-  "SelectedNode": "\\1 семестр\\Задания\\Составить число\\Program.cs",
+  "SelectedNode": "\\.gitignore",
   "PreviewInSolutionExplorer": false
 }
