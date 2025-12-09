@@ -1,9 +1,14 @@
 {
   "ExpandedNodes": [
     "",
+    "\\calculator",
     "\\semester-1",
     "\\semester-1\\additional-tasks",
+    "\\semester-1\\additional-tasks\\roman-numerals",
+    "\\semester-1\\tasks",
+    "\\semester-2",
     "\\templates"
   ],
+  "SelectedNode": "\\calculator\\Form1.cs",
   "PreviewInSolutionExplorer": false
 }
