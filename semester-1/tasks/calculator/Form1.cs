@@ -21,5 +21,15 @@ namespace calculator
         {
 
         }
+
+        private void button5_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
