@@ -29,30 +29,30 @@
         private void InitializeComponent()
         {
             tableLayoutPanel1 = new TableLayoutPanel();
-            tableLayoutPanel2 = new TableLayoutPanel();
+            textBoxSymbol = new TextBox();
+            btnResult = new Button();
             tableLayoutPanel5 = new TableLayoutPanel();
-            button1 = new Button();
-            button2 = new Button();
-            button3 = new Button();
-            button4 = new Button();
-            button5 = new Button();
-            button7 = new Button();
-            button8 = new Button();
-            button9 = new Button();
-            button10 = new Button();
-            button11 = new Button();
-            button12 = new Button();
-            button13 = new Button();
-            button14 = new Button();
-            button15 = new Button();
-            button16 = new Button();
-            button17 = new Button();
-            button19 = new Button();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
+            btnDivide = new Button();
+            btnMultiply = new Button();
+            btnSubtruct = new Button();
+            btnAdd = new Button();
+            tableLayoutPanel2 = new TableLayoutPanel();
+            btnClear = new Button();
+            btn0 = new Button();
+            btnDecimal = new Button();
+            btn9 = new Button();
+            btn8 = new Button();
+            btn7 = new Button();
+            btn6 = new Button();
+            btn5 = new Button();
+            btn4 = new Button();
+            btn3 = new Button();
+            btn2 = new Button();
+            btn1 = new Button();
+            textBoxResult = new TextBox();
             tableLayoutPanel1.SuspendLayout();
-            tableLayoutPanel2.SuspendLayout();
             tableLayoutPanel5.SuspendLayout();
+            tableLayoutPanel2.SuspendLayout();
             SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -60,11 +60,11 @@
             tableLayoutPanel1.ColumnCount = 2;
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 75F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
-            tableLayoutPanel1.Controls.Add(textBox2, 1, 0);
-            tableLayoutPanel1.Controls.Add(button19, 0, 2);
+            tableLayoutPanel1.Controls.Add(textBoxSymbol, 1, 0);
+            tableLayoutPanel1.Controls.Add(btnResult, 0, 2);
             tableLayoutPanel1.Controls.Add(tableLayoutPanel5, 1, 1);
             tableLayoutPanel1.Controls.Add(tableLayoutPanel2, 0, 1);
-            tableLayoutPanel1.Controls.Add(textBox1, 0, 0);
+            tableLayoutPanel1.Controls.Add(textBoxResult, 0, 0);
             tableLayoutPanel1.Dock = DockStyle.Fill;
             tableLayoutPanel1.Location = new Point(0, 0);
             tableLayoutPanel1.Margin = new Padding(0);
@@ -77,7 +77,97 @@
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
             tableLayoutPanel1.Size = new Size(382, 453);
             tableLayoutPanel1.TabIndex = 0;
-            tableLayoutPanel1.Paint += tableLayoutPanel1_Paint;
+            // 
+            // textBoxSymbol
+            // 
+            textBoxSymbol.Dock = DockStyle.Fill;
+            textBoxSymbol.Font = new Font("Arial", 20F);
+            textBoxSymbol.Location = new Point(291, 20);
+            textBoxSymbol.Margin = new Padding(10);
+            textBoxSymbol.Name = "textBoxSymbol";
+            textBoxSymbol.Size = new Size(71, 46);
+            textBoxSymbol.TabIndex = 9;
+            // 
+            // btnResult
+            // 
+            tableLayoutPanel1.SetColumnSpan(btnResult, 2);
+            btnResult.Dock = DockStyle.Fill;
+            btnResult.Font = new Font("Arial", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            btnResult.Location = new Point(15, 382);
+            btnResult.Margin = new Padding(5);
+            btnResult.Name = "btnResult";
+            btnResult.Size = new Size(352, 56);
+            btnResult.TabIndex = 7;
+            btnResult.Text = "=";
+            btnResult.UseVisualStyleBackColor = true;
+            // 
+            // tableLayoutPanel5
+            // 
+            tableLayoutPanel5.ColumnCount = 1;
+            tableLayoutPanel5.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 33.3333321F));
+            tableLayoutPanel5.Controls.Add(btnDivide, 0, 3);
+            tableLayoutPanel5.Controls.Add(btnMultiply, 0, 2);
+            tableLayoutPanel5.Controls.Add(btnSubtruct, 0, 1);
+            tableLayoutPanel5.Controls.Add(btnAdd, 0, 0);
+            tableLayoutPanel5.Dock = DockStyle.Fill;
+            tableLayoutPanel5.Location = new Point(291, 84);
+            tableLayoutPanel5.Margin = new Padding(10);
+            tableLayoutPanel5.Name = "tableLayoutPanel5";
+            tableLayoutPanel5.RowCount = 4;
+            tableLayoutPanel5.RowStyles.Add(new RowStyle(SizeType.Percent, 25F));
+            tableLayoutPanel5.RowStyles.Add(new RowStyle(SizeType.Percent, 25F));
+            tableLayoutPanel5.RowStyles.Add(new RowStyle(SizeType.Percent, 25F));
+            tableLayoutPanel5.RowStyles.Add(new RowStyle(SizeType.Percent, 25F));
+            tableLayoutPanel5.Size = new Size(71, 283);
+            tableLayoutPanel5.TabIndex = 3;
+            // 
+            // btnDivide
+            // 
+            btnDivide.Dock = DockStyle.Fill;
+            btnDivide.Font = new Font("Arial", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            btnDivide.Location = new Point(5, 215);
+            btnDivide.Margin = new Padding(5);
+            btnDivide.Name = "btnDivide";
+            btnDivide.Size = new Size(61, 63);
+            btnDivide.TabIndex = 4;
+            btnDivide.Text = "/";
+            btnDivide.UseVisualStyleBackColor = true;
+            // 
+            // btnMultiply
+            // 
+            btnMultiply.Dock = DockStyle.Fill;
+            btnMultiply.Font = new Font("Arial", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            btnMultiply.Location = new Point(5, 145);
+            btnMultiply.Margin = new Padding(5);
+            btnMultiply.Name = "btnMultiply";
+            btnMultiply.Size = new Size(61, 60);
+            btnMultiply.TabIndex = 3;
+            btnMultiply.Text = "*";
+            btnMultiply.UseVisualStyleBackColor = true;
+            // 
+            // btnSubtruct
+            // 
+            btnSubtruct.Dock = DockStyle.Fill;
+            btnSubtruct.Font = new Font("Arial", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            btnSubtruct.Location = new Point(5, 75);
+            btnSubtruct.Margin = new Padding(5);
+            btnSubtruct.Name = "btnSubtruct";
+            btnSubtruct.Size = new Size(61, 60);
+            btnSubtruct.TabIndex = 2;
+            btnSubtruct.Text = "-";
+            btnSubtruct.UseVisualStyleBackColor = true;
+            // 
+            // btnAdd
+            // 
+            btnAdd.Dock = DockStyle.Fill;
+            btnAdd.Font = new Font("Arial", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            btnAdd.Location = new Point(5, 5);
+            btnAdd.Margin = new Padding(5);
+            btnAdd.Name = "btnAdd";
+            btnAdd.Size = new Size(61, 60);
+            btnAdd.TabIndex = 1;
+            btnAdd.Text = "+";
+            btnAdd.UseVisualStyleBackColor = true;
             // 
             // tableLayoutPanel2
             // 
@@ -85,18 +175,18 @@
             tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 33.3333321F));
             tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 33.3333359F));
             tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 33.3333359F));
-            tableLayoutPanel2.Controls.Add(button14, 2, 3);
-            tableLayoutPanel2.Controls.Add(button13, 1, 3);
-            tableLayoutPanel2.Controls.Add(button12, 0, 3);
-            tableLayoutPanel2.Controls.Add(button11, 2, 2);
-            tableLayoutPanel2.Controls.Add(button10, 1, 2);
-            tableLayoutPanel2.Controls.Add(button9, 0, 2);
-            tableLayoutPanel2.Controls.Add(button8, 2, 1);
-            tableLayoutPanel2.Controls.Add(button7, 1, 1);
-            tableLayoutPanel2.Controls.Add(button5, 0, 1);
-            tableLayoutPanel2.Controls.Add(button3, 2, 0);
-            tableLayoutPanel2.Controls.Add(button2, 1, 0);
-            tableLayoutPanel2.Controls.Add(button1, 0, 0);
+            tableLayoutPanel2.Controls.Add(btnClear, 2, 3);
+            tableLayoutPanel2.Controls.Add(btn0, 1, 3);
+            tableLayoutPanel2.Controls.Add(btnDecimal, 0, 3);
+            tableLayoutPanel2.Controls.Add(btn9, 2, 2);
+            tableLayoutPanel2.Controls.Add(btn8, 1, 2);
+            tableLayoutPanel2.Controls.Add(btn7, 0, 2);
+            tableLayoutPanel2.Controls.Add(btn6, 2, 1);
+            tableLayoutPanel2.Controls.Add(btn5, 1, 1);
+            tableLayoutPanel2.Controls.Add(btn4, 0, 1);
+            tableLayoutPanel2.Controls.Add(btn3, 2, 0);
+            tableLayoutPanel2.Controls.Add(btn2, 1, 0);
+            tableLayoutPanel2.Controls.Add(btn1, 0, 0);
             tableLayoutPanel2.Dock = DockStyle.Fill;
             tableLayoutPanel2.Location = new Point(20, 84);
             tableLayoutPanel2.Margin = new Padding(10);
@@ -110,252 +200,159 @@
             tableLayoutPanel2.Size = new Size(251, 283);
             tableLayoutPanel2.TabIndex = 0;
             // 
-            // tableLayoutPanel5
+            // btnClear
             // 
-            tableLayoutPanel5.ColumnCount = 1;
-            tableLayoutPanel5.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 33.3333321F));
-            tableLayoutPanel5.Controls.Add(button17, 0, 3);
-            tableLayoutPanel5.Controls.Add(button16, 0, 2);
-            tableLayoutPanel5.Controls.Add(button15, 0, 1);
-            tableLayoutPanel5.Controls.Add(button4, 0, 0);
-            tableLayoutPanel5.Dock = DockStyle.Fill;
-            tableLayoutPanel5.Location = new Point(291, 84);
-            tableLayoutPanel5.Margin = new Padding(10);
-            tableLayoutPanel5.Name = "tableLayoutPanel5";
-            tableLayoutPanel5.RowCount = 4;
-            tableLayoutPanel5.RowStyles.Add(new RowStyle(SizeType.Percent, 25F));
-            tableLayoutPanel5.RowStyles.Add(new RowStyle(SizeType.Percent, 25F));
-            tableLayoutPanel5.RowStyles.Add(new RowStyle(SizeType.Percent, 25F));
-            tableLayoutPanel5.RowStyles.Add(new RowStyle(SizeType.Percent, 25F));
-            tableLayoutPanel5.Size = new Size(71, 283);
-            tableLayoutPanel5.TabIndex = 3;
+            btnClear.Dock = DockStyle.Fill;
+            btnClear.Font = new Font("Arial", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            btnClear.Location = new Point(171, 215);
+            btnClear.Margin = new Padding(5);
+            btnClear.Name = "btnClear";
+            btnClear.Size = new Size(75, 63);
+            btnClear.TabIndex = 11;
+            btnClear.Text = "C";
+            btnClear.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btn0
             // 
-            button1.Dock = DockStyle.Fill;
-            button1.Font = new Font("Arial", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            button1.Location = new Point(5, 5);
-            button1.Margin = new Padding(5);
-            button1.Name = "button1";
-            button1.Size = new Size(73, 60);
-            button1.TabIndex = 0;
-            button1.Text = "1";
-            button1.UseVisualStyleBackColor = true;
+            btn0.Dock = DockStyle.Fill;
+            btn0.Font = new Font("Arial", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            btn0.Location = new Point(88, 215);
+            btn0.Margin = new Padding(5);
+            btn0.Name = "btn0";
+            btn0.Size = new Size(73, 63);
+            btn0.TabIndex = 10;
+            btn0.Text = "0";
+            btn0.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnDecimal
             // 
-            button2.Dock = DockStyle.Fill;
-            button2.Font = new Font("Arial", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            button2.Location = new Point(88, 5);
-            button2.Margin = new Padding(5);
-            button2.Name = "button2";
-            button2.Size = new Size(73, 60);
-            button2.TabIndex = 1;
-            button2.Text = "2";
-            button2.UseVisualStyleBackColor = true;
+            btnDecimal.Dock = DockStyle.Fill;
+            btnDecimal.Font = new Font("Arial", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            btnDecimal.Location = new Point(5, 215);
+            btnDecimal.Margin = new Padding(5);
+            btnDecimal.Name = "btnDecimal";
+            btnDecimal.Size = new Size(73, 63);
+            btnDecimal.TabIndex = 9;
+            btnDecimal.Text = ",";
+            btnDecimal.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btn9
             // 
-            button3.Dock = DockStyle.Fill;
-            button3.Font = new Font("Arial", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            button3.Location = new Point(171, 5);
-            button3.Margin = new Padding(5);
-            button3.Name = "button3";
-            button3.Size = new Size(75, 60);
-            button3.TabIndex = 2;
-            button3.Text = "3";
-            button3.UseVisualStyleBackColor = true;
+            btn9.Dock = DockStyle.Fill;
+            btn9.Font = new Font("Arial", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            btn9.Location = new Point(171, 145);
+            btn9.Margin = new Padding(5);
+            btn9.Name = "btn9";
+            btn9.Size = new Size(75, 60);
+            btn9.TabIndex = 8;
+            btn9.Text = "9";
+            btn9.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // btn8
             // 
-            button4.Dock = DockStyle.Fill;
-            button4.Font = new Font("Arial", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            button4.Location = new Point(5, 5);
-            button4.Margin = new Padding(5);
-            button4.Name = "button4";
-            button4.Size = new Size(61, 60);
-            button4.TabIndex = 1;
-            button4.Text = "+";
-            button4.UseVisualStyleBackColor = true;
+            btn8.Dock = DockStyle.Fill;
+            btn8.Font = new Font("Arial", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            btn8.Location = new Point(88, 145);
+            btn8.Margin = new Padding(5);
+            btn8.Name = "btn8";
+            btn8.Size = new Size(73, 60);
+            btn8.TabIndex = 7;
+            btn8.Text = "8";
+            btn8.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // btn7
             // 
-            button5.Dock = DockStyle.Fill;
-            button5.Font = new Font("Arial", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            button5.Location = new Point(5, 75);
-            button5.Margin = new Padding(5);
-            button5.Name = "button5";
-            button5.Size = new Size(73, 60);
-            button5.TabIndex = 3;
-            button5.Text = "4";
-            button5.UseVisualStyleBackColor = true;
-            button5.Click += button5_Click_1;
+            btn7.Dock = DockStyle.Fill;
+            btn7.Font = new Font("Arial", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            btn7.Location = new Point(5, 145);
+            btn7.Margin = new Padding(5);
+            btn7.Name = "btn7";
+            btn7.Size = new Size(73, 60);
+            btn7.TabIndex = 6;
+            btn7.Text = "7";
+            btn7.UseVisualStyleBackColor = true;
             // 
-            // button7
+            // btn6
             // 
-            button7.Dock = DockStyle.Fill;
-            button7.Font = new Font("Arial", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            button7.Location = new Point(88, 75);
-            button7.Margin = new Padding(5);
-            button7.Name = "button7";
-            button7.Size = new Size(73, 60);
-            button7.TabIndex = 4;
-            button7.Text = "5";
-            button7.UseVisualStyleBackColor = true;
+            btn6.Dock = DockStyle.Fill;
+            btn6.Font = new Font("Arial", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            btn6.Location = new Point(171, 75);
+            btn6.Margin = new Padding(5);
+            btn6.Name = "btn6";
+            btn6.Size = new Size(75, 60);
+            btn6.TabIndex = 5;
+            btn6.Text = "6";
+            btn6.UseVisualStyleBackColor = true;
             // 
-            // button8
+            // btn5
             // 
-            button8.Dock = DockStyle.Fill;
-            button8.Font = new Font("Arial", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            button8.Location = new Point(171, 75);
-            button8.Margin = new Padding(5);
-            button8.Name = "button8";
-            button8.Size = new Size(75, 60);
-            button8.TabIndex = 5;
-            button8.Text = "6";
-            button8.UseVisualStyleBackColor = true;
+            btn5.Dock = DockStyle.Fill;
+            btn5.Font = new Font("Arial", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            btn5.Location = new Point(88, 75);
+            btn5.Margin = new Padding(5);
+            btn5.Name = "btn5";
+            btn5.Size = new Size(73, 60);
+            btn5.TabIndex = 4;
+            btn5.Text = "5";
+            btn5.UseVisualStyleBackColor = true;
             // 
-            // button9
+            // btn4
             // 
-            button9.Dock = DockStyle.Fill;
-            button9.Font = new Font("Arial", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            button9.Location = new Point(5, 145);
-            button9.Margin = new Padding(5);
-            button9.Name = "button9";
-            button9.Size = new Size(73, 60);
-            button9.TabIndex = 6;
-            button9.Text = "7";
-            button9.UseVisualStyleBackColor = true;
+            btn4.Dock = DockStyle.Fill;
+            btn4.Font = new Font("Arial", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            btn4.Location = new Point(5, 75);
+            btn4.Margin = new Padding(5);
+            btn4.Name = "btn4";
+            btn4.Size = new Size(73, 60);
+            btn4.TabIndex = 3;
+            btn4.Text = "4";
+            btn4.UseVisualStyleBackColor = true;
             // 
-            // button10
+            // btn3
             // 
-            button10.Dock = DockStyle.Fill;
-            button10.Font = new Font("Arial", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            button10.Location = new Point(88, 145);
-            button10.Margin = new Padding(5);
-            button10.Name = "button10";
-            button10.Size = new Size(73, 60);
-            button10.TabIndex = 7;
-            button10.Text = "8";
-            button10.UseVisualStyleBackColor = true;
-            button10.Click += button10_Click;
+            btn3.Dock = DockStyle.Fill;
+            btn3.Font = new Font("Arial", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            btn3.Location = new Point(171, 5);
+            btn3.Margin = new Padding(5);
+            btn3.Name = "btn3";
+            btn3.Size = new Size(75, 60);
+            btn3.TabIndex = 2;
+            btn3.Text = "3";
+            btn3.UseVisualStyleBackColor = true;
             // 
-            // button11
+            // btn2
             // 
-            button11.Dock = DockStyle.Fill;
-            button11.Font = new Font("Arial", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            button11.Location = new Point(171, 145);
-            button11.Margin = new Padding(5);
-            button11.Name = "button11";
-            button11.Size = new Size(75, 60);
-            button11.TabIndex = 8;
-            button11.Text = "9";
-            button11.UseVisualStyleBackColor = true;
+            btn2.Dock = DockStyle.Fill;
+            btn2.Font = new Font("Arial", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            btn2.Location = new Point(88, 5);
+            btn2.Margin = new Padding(5);
+            btn2.Name = "btn2";
+            btn2.Size = new Size(73, 60);
+            btn2.TabIndex = 1;
+            btn2.Text = "2";
+            btn2.UseVisualStyleBackColor = true;
             // 
-            // button12
+            // btn1
             // 
-            button12.Dock = DockStyle.Fill;
-            button12.Font = new Font("Arial", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            button12.Location = new Point(5, 215);
-            button12.Margin = new Padding(5);
-            button12.Name = "button12";
-            button12.Size = new Size(73, 63);
-            button12.TabIndex = 9;
-            button12.Text = ",";
-            button12.UseVisualStyleBackColor = true;
+            btn1.Dock = DockStyle.Fill;
+            btn1.Font = new Font("Arial", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            btn1.Location = new Point(5, 5);
+            btn1.Margin = new Padding(5);
+            btn1.Name = "btn1";
+            btn1.Size = new Size(73, 60);
+            btn1.TabIndex = 0;
+            btn1.Text = "1";
+            btn1.UseVisualStyleBackColor = true;
             // 
-            // button13
+            // textBoxResult
             // 
-            button13.Dock = DockStyle.Fill;
-            button13.Font = new Font("Arial", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            button13.Location = new Point(88, 215);
-            button13.Margin = new Padding(5);
-            button13.Name = "button13";
-            button13.Size = new Size(73, 63);
-            button13.TabIndex = 10;
-            button13.Text = "0";
-            button13.UseVisualStyleBackColor = true;
-            // 
-            // button14
-            // 
-            button14.Dock = DockStyle.Fill;
-            button14.Font = new Font("Arial", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            button14.Location = new Point(171, 215);
-            button14.Margin = new Padding(5);
-            button14.Name = "button14";
-            button14.Size = new Size(75, 63);
-            button14.TabIndex = 11;
-            button14.Text = "C";
-            button14.UseVisualStyleBackColor = true;
-            // 
-            // button15
-            // 
-            button15.Dock = DockStyle.Fill;
-            button15.Font = new Font("Arial", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            button15.Location = new Point(5, 75);
-            button15.Margin = new Padding(5);
-            button15.Name = "button15";
-            button15.Size = new Size(61, 60);
-            button15.TabIndex = 2;
-            button15.Text = "-";
-            button15.UseVisualStyleBackColor = true;
-            // 
-            // button16
-            // 
-            button16.Dock = DockStyle.Fill;
-            button16.Font = new Font("Arial", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            button16.Location = new Point(5, 145);
-            button16.Margin = new Padding(5);
-            button16.Name = "button16";
-            button16.Size = new Size(61, 60);
-            button16.TabIndex = 3;
-            button16.Text = "*";
-            button16.UseVisualStyleBackColor = true;
-            // 
-            // button17
-            // 
-            button17.Dock = DockStyle.Fill;
-            button17.Font = new Font("Arial", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            button17.Location = new Point(5, 215);
-            button17.Margin = new Padding(5);
-            button17.Name = "button17";
-            button17.Size = new Size(61, 63);
-            button17.TabIndex = 4;
-            button17.Text = "/";
-            button17.UseVisualStyleBackColor = true;
-            // 
-            // button19
-            // 
-            tableLayoutPanel1.SetColumnSpan(button19, 2);
-            button19.Dock = DockStyle.Fill;
-            button19.Font = new Font("Arial", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            button19.Location = new Point(15, 382);
-            button19.Margin = new Padding(5);
-            button19.Name = "button19";
-            button19.Size = new Size(352, 56);
-            button19.TabIndex = 7;
-            button19.Text = "=";
-            button19.UseVisualStyleBackColor = true;
-            // 
-            // textBox1
-            // 
-            textBox1.Dock = DockStyle.Fill;
-            textBox1.Font = new Font("Arial", 20F);
-            textBox1.Location = new Point(20, 20);
-            textBox1.Margin = new Padding(10);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(251, 46);
-            textBox1.TabIndex = 8;
-            // 
-            // textBox2
-            // 
-            textBox2.Dock = DockStyle.Fill;
-            textBox2.Font = new Font("Arial", 20F);
-            textBox2.Location = new Point(291, 20);
-            textBox2.Margin = new Padding(10);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(71, 46);
-            textBox2.TabIndex = 9;
+            textBoxResult.Dock = DockStyle.Fill;
+            textBoxResult.Font = new Font("Arial", 20F);
+            textBoxResult.Location = new Point(20, 20);
+            textBoxResult.Margin = new Padding(10);
+            textBoxResult.Name = "textBoxResult";
+            textBoxResult.Size = new Size(251, 46);
+            textBoxResult.TabIndex = 8;
             // 
             // Form1
             // 
@@ -367,8 +364,8 @@
             Text = "Form1";
             tableLayoutPanel1.ResumeLayout(false);
             tableLayoutPanel1.PerformLayout();
-            tableLayoutPanel2.ResumeLayout(false);
             tableLayoutPanel5.ResumeLayout(false);
+            tableLayoutPanel2.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -377,24 +374,24 @@
         private TableLayoutPanel tableLayoutPanel1;
         private TableLayoutPanel tableLayoutPanel2;
         private TableLayoutPanel tableLayoutPanel5;
-        private Button button1;
-        private Button button4;
-        private Button button3;
-        private Button button2;
-        private Button button19;
-        private Button button17;
-        private Button button16;
-        private Button button15;
-        private Button button14;
-        private Button button13;
-        private Button button12;
-        private Button button11;
-        private Button button10;
-        private Button button9;
-        private Button button8;
-        private Button button7;
-        private Button button5;
-        private TextBox textBox1;
-        private TextBox textBox2;
+        private Button btn1;
+        private Button btnAdd;
+        private Button btn3;
+        private Button btn2;
+        private Button btnResult;
+        private Button btnDivide;
+        private Button btnMultiply;
+        private Button btnSubtruct;
+        private Button btnClear;
+        private Button btn0;
+        private Button btnDecimal;
+        private Button btn9;
+        private Button btn8;
+        private Button btn7;
+        private Button btn6;
+        private Button btn5;
+        private Button btn4;
+        private TextBox textBoxResult;
+        private TextBox textBoxSymbol;
     }
 }
