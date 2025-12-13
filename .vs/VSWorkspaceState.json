@@ -2,8 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\semester-1",
-    "\\semester-1\\tasks"
+    "\\semester-1\\tasks",
+    "\\semester-1\\tasks\\calculator"
   ],
-  "SelectedNode": "\\semester-1\\tasks\\create-number",
+  "SelectedNode": "\\semester-1\\tasks\\calculator\\Form1.cs",
   "PreviewInSolutionExplorer": false
 }
