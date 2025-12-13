@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             tableLayoutPanel1 = new TableLayoutPanel();
+            tbOperator = new TextBox();
             btnEquals = new Button();
             tbOutput = new TextBox();
             tableLayoutPanel2 = new TableLayoutPanel();
@@ -49,7 +50,6 @@
             btnMultiply = new Button();
             btnSubtract = new Button();
             btnAdd = new Button();
-            tbOperator = new TextBox();
             tableLayoutPanel1.SuspendLayout();
             tableLayoutPanel2.SuspendLayout();
             tableLayoutPanel3.SuspendLayout();
@@ -74,6 +74,16 @@
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 15F));
             tableLayoutPanel1.Size = new Size(282, 353);
             tableLayoutPanel1.TabIndex = 0;
+            // 
+            // tbOperator
+            // 
+            tbOperator.Dock = DockStyle.Fill;
+            tbOperator.Font = new Font("Arial Narrow", 18F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            tbOperator.Location = new Point(228, 10);
+            tbOperator.Margin = new Padding(3, 10, 3, 3);
+            tbOperator.Name = "tbOperator";
+            tbOperator.Size = new Size(51, 42);
+            tbOperator.TabIndex = 6;
             // 
             // btnEquals
             // 
@@ -339,16 +349,6 @@
             btnAdd.Text = "+";
             btnAdd.UseVisualStyleBackColor = true;
             btnAdd.Click += btnAdd_Click;
-            // 
-            // tbOperator
-            // 
-            tbOperator.Dock = DockStyle.Fill;
-            tbOperator.Font = new Font("Arial Narrow", 18F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            tbOperator.Location = new Point(228, 10);
-            tbOperator.Margin = new Padding(3, 10, 3, 3);
-            tbOperator.Name = "tbOperator";
-            tbOperator.Size = new Size(51, 42);
-            tbOperator.TabIndex = 6;
             // 
             // Calculator
             // 
