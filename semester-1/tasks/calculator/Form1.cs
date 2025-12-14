@@ -36,6 +36,13 @@ namespace calculator
 
         private void SetOperator(string op)
         {
+            if (tbOutput.Text == "Error")
+            {
+                ClearAll();
+                tbOutput.Text = "0";
+                return;
+            }
+
             if (!string.IsNullOrEmpty(tbOutput.Text))
             {
                 firstNumber = double.Parse(tbOutput.Text);
