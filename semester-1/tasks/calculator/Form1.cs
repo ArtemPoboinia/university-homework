@@ -14,6 +14,7 @@ namespace calculator
             InitializeComponent();
             tbOutput.Text = "0";
 
+            // Убрал фокус с текстового поля на clear
             this.Shown += (s, e) =>
             {
                 btnClear.Focus();
@@ -34,6 +35,7 @@ namespace calculator
             }
         }
 
+        // Функция установки оператора
         private void SetOperator(string op)
         {
             if (tbOutput.Text == "Error")
@@ -59,6 +61,7 @@ namespace calculator
             }
         }
 
+        // Функция вычисления результата
         private void CalculateResult()
         {
             if (string.IsNullOrEmpty(currentOperator) ||
@@ -93,7 +96,6 @@ namespace calculator
             }
 
             tbOperator.Text = "";
-
             tbOutput.Text = result.ToString();
 
             currentOperator = "";
