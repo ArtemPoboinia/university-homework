@@ -18,7 +18,7 @@ namespace calculator
         // Функция добавления цифры
         private void AddDigit(string digit)
         {
-            if (isNewCalculation)
+            if (isNewCalculation || tbOutput.Text == "0")
             {
                 tbOutput.Text = digit;
                 isNewCalculation = false;
