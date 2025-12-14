@@ -82,6 +82,7 @@
             tbOperator.Location = new Point(228, 10);
             tbOperator.Margin = new Padding(3, 10, 3, 3);
             tbOperator.Name = "tbOperator";
+            tbOperator.ReadOnly = true;
             tbOperator.Size = new Size(51, 42);
             tbOperator.TabIndex = 6;
             // 
@@ -105,6 +106,7 @@
             tbOutput.Location = new Point(10, 10);
             tbOutput.Margin = new Padding(10, 10, 10, 3);
             tbOutput.Name = "tbOutput";
+            tbOutput.ReadOnly = true;
             tbOutput.Size = new Size(205, 42);
             tbOutput.TabIndex = 0;
             // 

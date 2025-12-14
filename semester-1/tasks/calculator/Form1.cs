@@ -13,6 +13,11 @@ namespace calculator
         {
             InitializeComponent();
             tbOutput.Text = "0";
+
+            this.Shown += (s, e) =>
+            {
+                btnClear.Focus();
+            };
         }
 
         // Функция добавления цифры
