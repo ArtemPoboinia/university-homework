@@ -3,8 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\olesy\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\university-homework\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C32FA5C9-42D1-436D-BF64-F75DBBB5B1A8}|semester-2\\tasks\\kaleidoscope\\kaleidoscope.csproj|c:\\users\\olesy\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\university-homework\\semester-2\\tasks\\kaleidoscope\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C32FA5C9-42D1-436D-BF64-F75DBBB5B1A8}|semester-2\\tasks\\kaleidoscope\\kaleidoscope.csproj|solutionrelative:semester-2\\tasks\\kaleidoscope\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4C8AC579-370E-47BD-851C-8F8FFBB86149}|semester-2\\tasks\\comb-an-array\\comb-an-array.csproj|c:\\users\\olesy\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\university-homework\\semester-2\\tasks\\comb-an-array\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4C8AC579-370E-47BD-851C-8F8FFBB86149}|semester-2\\tasks\\comb-an-array\\comb-an-array.csproj|solutionrelative:semester-2\\tasks\\comb-an-array\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\olesy\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\university-homework\\templates\\csharp-consoles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:templates\\csharp-consoles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\olesy\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\university-homework\\semester-2\\tasks\\kaleidoscope\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:semester-2\\tasks\\kaleidoscope\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,17 +22,43 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "csharp-consoles.cs",
+              "DocumentMoniker": "C:\\Users\\olesy\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\university-homework\\templates\\csharp-consoles.cs",
+              "RelativeDocumentMoniker": "templates\\csharp-consoles.cs",
+              "ToolTip": "C:\\Users\\olesy\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\university-homework\\templates\\csharp-consoles.cs",
+              "RelativeToolTip": "templates\\csharp-consoles.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-11T01:33:34.406Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\olesy\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\university-homework\\semester-2\\tasks\\comb-an-array\\Program.cs",
+              "RelativeDocumentMoniker": "semester-2\\tasks\\comb-an-array\\Program.cs",
+              "ToolTip": "C:\\Users\\olesy\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\university-homework\\semester-2\\tasks\\comb-an-array\\Program.cs",
+              "RelativeToolTip": "semester-2\\tasks\\comb-an-array\\Program.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAxwBgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-11T01:33:22.602Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\olesy\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\university-homework\\semester-2\\tasks\\kaleidoscope\\Program.cs",
               "RelativeDocumentMoniker": "semester-2\\tasks\\kaleidoscope\\Program.cs",
               "ToolTip": "C:\\Users\\olesy\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\university-homework\\semester-2\\tasks\\kaleidoscope\\Program.cs",
               "RelativeToolTip": "semester-2\\tasks\\kaleidoscope\\Program.cs",
-              "ViewState": "AgIAAE0AAAAAAAAAAAAgwFcAAAAdAAAAAAAAAA==",
+              "ViewState": "AgIAAFoAAAAAAAAAAAAAAGwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-06T20:36:30.442Z",
               "EditorCaption": ""

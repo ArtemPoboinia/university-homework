@@ -1,7 +1,12 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\semester-1",
+    "\\semester-2",
+    "\\semester-2\\tasks",
+    "\\semester-2\\tasks\\kaleidoscope",
+    "\\templates"
   ],
-  "SelectedNode": "\\C:\\Users\\olesy\\OneDrive\\Рабочий стол\\university-homework",
+  "SelectedNode": "\\semester-2\\tasks\\kaleidoscope\\Program.cs",
   "PreviewInSolutionExplorer": false
 }
