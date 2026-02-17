@@ -3,10 +3,12 @@
     "",
     "\\semester-1",
     "\\semester-2",
+    "\\semester-2\\additional-tasks",
+    "\\semester-2\\additional-tasks\\n-letter-words",
     "\\semester-2\\tasks",
-    "\\semester-2\\tasks\\best-teacher",
+    "\\semester-2\\tasks\\search-in-two-dimensional-array",
     "\\templates"
   ],
-  "SelectedNode": "\\semester-2\\tasks\\best-teacher\\Program.cs",
+  "SelectedNode": "\\semester-2\\tasks\\search-in-two-dimensional-array\\Program.cs",
   "PreviewInSolutionExplorer": false
 }
