@@ -3,12 +3,9 @@
     "",
     "\\semester-1",
     "\\semester-2",
-    "\\semester-2\\additional-tasks",
-    "\\semester-2\\additional-tasks\\n-letter-words",
     "\\semester-2\\tasks",
-    "\\semester-2\\tasks\\search-in-two-dimensional-array",
-    "\\templates"
+    "\\semester-2\\tasks\\sorting-stepwise-array"
   ],
-  "SelectedNode": "\\semester-2\\tasks\\search-in-two-dimensional-array\\Program.cs",
+  "SelectedNode": "\\semester-2\\tasks\\sorting-stepwise-array\\Program.cs",
   "PreviewInSolutionExplorer": false
 }
