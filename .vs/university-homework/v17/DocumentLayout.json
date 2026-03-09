@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\olesy\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\university-homework\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{AEDCF1AB-5AF7-4823-B8DA-7CA43CF6CB1A}|semester-2\\tasks\\sorting-segments\\sorting-segments.csproj|c:\\users\\olesy\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\university-homework\\semester-2\\tasks\\sorting-segments\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AEDCF1AB-5AF7-4823-B8DA-7CA43CF6CB1A}|semester-2\\tasks\\sorting-segments\\sorting-segments.csproj|solutionrelative:semester-2\\tasks\\sorting-segments\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\olesy\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\university-homework\\semester-2\\tasks\\declaring-structures\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:semester-2\\tasks\\declaring-structures\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -24,13 +24,13 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\olesy\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\university-homework\\semester-2\\tasks\\sorting-segments\\Program.cs",
-              "RelativeDocumentMoniker": "semester-2\\tasks\\sorting-segments\\Program.cs",
-              "ToolTip": "C:\\Users\\olesy\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\university-homework\\semester-2\\tasks\\sorting-segments\\Program.cs",
-              "RelativeToolTip": "semester-2\\tasks\\sorting-segments\\Program.cs",
-              "ViewState": "AgIAADwAAAAAAAAAAAAowFAAAAAxAAAAAAAAAA==",
+              "DocumentMoniker": "C:\\Users\\olesy\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\university-homework\\semester-2\\tasks\\declaring-structures\\Program.cs",
+              "RelativeDocumentMoniker": "semester-2\\tasks\\declaring-structures\\Program.cs",
+              "ToolTip": "C:\\Users\\olesy\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\university-homework\\semester-2\\tasks\\declaring-structures\\Program.cs",
+              "RelativeToolTip": "semester-2\\tasks\\declaring-structures\\Program.cs",
+              "ViewState": "AgIAAHMAAAAAAAAAAAAqwKQAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-08T19:13:54.46Z",
+              "WhenOpened": "2026-03-09T11:00:31.488Z",
               "EditorCaption": ""
             }
           ]
