@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 
 // Структура ребенка
 public struct Child
