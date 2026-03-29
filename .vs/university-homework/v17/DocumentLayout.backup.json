@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\olesy\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\university-homework\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{95B4DCB1-5A05-46B7-AC62-627F55B11414}|semester-2\\tasks\\calculating-the cost-of-apartments\\calculating-the cost-of-apartments.csproj|c:\\users\\olesy\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\university-homework\\semester-2\\tasks\\calculating-the cost-of-apartments\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{95B4DCB1-5A05-46B7-AC62-627F55B11414}|semester-2\\tasks\\calculating-the cost-of-apartments\\calculating-the cost-of-apartments.csproj|solutionrelative:semester-2\\tasks\\calculating-the cost-of-apartments\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B2B5DB95-D1BD-443B-8F69-993867FBF847}|semester-2\\tasks\\groups-of-similar-ones\\groups-of-similar-ones.csproj|c:\\users\\olesy\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\university-homework\\semester-2\\tasks\\groups-of-similar-ones\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2B5DB95-D1BD-443B-8F69-993867FBF847}|semester-2\\tasks\\groups-of-similar-ones\\groups-of-similar-ones.csproj|solutionrelative:semester-2\\tasks\\groups-of-similar-ones\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -24,13 +24,13 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\olesy\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\university-homework\\semester-2\\tasks\\calculating-the cost-of-apartments\\Program.cs",
-              "RelativeDocumentMoniker": "semester-2\\tasks\\calculating-the cost-of-apartments\\Program.cs",
-              "ToolTip": "C:\\Users\\olesy\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\university-homework\\semester-2\\tasks\\calculating-the cost-of-apartments\\Program.cs",
-              "RelativeToolTip": "semester-2\\tasks\\calculating-the cost-of-apartments\\Program.cs",
-              "ViewState": "AgIAAB8AAAAAAAAAAAAwwDYAAABUAAAAAAAAAA==",
+              "DocumentMoniker": "C:\\Users\\olesy\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\university-homework\\semester-2\\tasks\\groups-of-similar-ones\\Program.cs",
+              "RelativeDocumentMoniker": "semester-2\\tasks\\groups-of-similar-ones\\Program.cs",
+              "ToolTip": "C:\\Users\\olesy\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\university-homework\\semester-2\\tasks\\groups-of-similar-ones\\Program.cs",
+              "RelativeToolTip": "semester-2\\tasks\\groups-of-similar-ones\\Program.cs",
+              "ViewState": "AgIAADQAAAAAAAAAAAAkwBIAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-22T15:13:09.092Z",
+              "WhenOpened": "2026-03-29T19:13:13.862Z",
               "EditorCaption": ""
             }
           ]
