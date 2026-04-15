@@ -1,12 +1,12 @@
 {
   "ExpandedNodes": [
     "",
-    "\\semester-1",
     "\\semester-2",
+    "\\semester-2\\coursework",
+    "\\semester-2\\coursework\\CardFool2026",
     "\\semester-2\\tasks",
-    "\\semester-2\\tasks\\groups-of-similar-ones",
-    "\\templates"
+    "\\semester-2\\tasks\\hanoi-towers"
   ],
-  "SelectedNode": "\\semester-1",
+  "SelectedNode": "\\semester-2\\tasks\\hanoi-towers\\Program.cs",
   "PreviewInSolutionExplorer": false
 }
