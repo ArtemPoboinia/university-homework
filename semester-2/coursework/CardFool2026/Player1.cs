@@ -1,11 +1,13 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 
 namespace CardFool
 {
     public class MPlayer1
     {
-        private string Name = "First";
+        private string Name = "Prototype 0.1";
         private List<SCard> hand = new List<SCard>();       // карты на руке
+        private Suits trumpSuit; // Козырная масть
 
         // Возвращает имя игрока
         public string GetName()
@@ -15,12 +17,20 @@ namespace CardFool
         //Возвращает количество карт на руке
         public int GetCount()
         {
-            return 0;
+            return hand.Count;
         }
         //Добавление карты в руку, во время добора из колоды, или взятия карт
         public void AddToHand(SCard card)
         {
+            hand.Add(card);
+            SortHand();
+        }
 
+        private void SortHand()
+        {
+            hand = hand.OrderBy(c => c.Suit == trumpSuit) // False (0) идет перед True (1)
+                       .ThenBy(c => c.Rank)
+                       .ToList();
         }
 
         //Начальная атака
@@ -50,7 +60,7 @@ namespace CardFool
         //Установка козыря, на вход подаётся козырь, вызывается перед первой раздачей карт
         public void SetTrump(SCard NewTrump)
         {
-
+            trumpSuit = NewTrump.Suit;
         }
     }
 }
