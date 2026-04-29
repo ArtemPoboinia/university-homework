@@ -2,10 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\semester-2",
-    "\\semester-2\\tasks",
-    "\\semester-2\\tasks\\algorithm-eratosthenes",
-    "\\templates"
+    "\\semester-2\\coursework",
+    "\\semester-2\\coursework\\CardFool2026"
   ],
-  "SelectedNode": "\\semester-2\\tasks\\algorithm-eratosthenes\\Program.cs",
+  "SelectedNode": "\\semester-2\\coursework\\CardFool2026\\Player1.cs",
   "PreviewInSolutionExplorer": false
 }
