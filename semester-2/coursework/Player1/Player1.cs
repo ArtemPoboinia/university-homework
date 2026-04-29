@@ -1,25 +1,21 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using System;
 
 namespace CardFool
 {
-    public class MPlayer1
+    // Убедитесь, что MPlayer2 выглядит идентично, только с другим именем класса
+    public class MPlayer1 
     {
-        private string Name = "Prototype 0.1";
-        private List<SCard> hand = new List<SCard>();       // карты на руке
-        private Suits trumpSuit; // Козырная масть
+        private string Name = "Bot_1";
+        private List<SCard> hand = new List<SCard>();
+        private Suits trumpSuit;
 
-        // Возвращает имя игрока
-        public string GetName()
-        {
-            return Name;
-        }
-        //Возвращает количество карт на руке
-        public int GetCount()
-        {
-            return hand.Count;
-        }
-        //Добавление карты в руку, во время добора из колоды, или взятия карт
+        public string GetName() => Name;
+        public int GetCount() => hand.Count;
+
+        public void SetTrump(SCard NewTrump) => trumpSuit = NewTrump.Suit;
+
         public void AddToHand(SCard card)
         {
             hand.Add(card);
@@ -28,39 +24,65 @@ namespace CardFool
 
         private void SortHand()
         {
-            hand = hand.OrderBy(c => c.Suit == trumpSuit) // False (0) идет перед True (1)
+            hand = hand.OrderBy(c => c.Suit == trumpSuit)
                        .ThenBy(c => c.Rank)
                        .ToList();
         }
 
-        //Начальная атака
+        // Логика атаки
         public List<SCard> LayCards()
         {
-            return [];
+            var toLay = new List<SCard>();
+            // Если рука пуста, мы не можем атаковать, но по правилам AddCards 
+            // должен был дать нам карты. Если их нет - это конец игры.
+            if (hand.Count > 0)
+            {
+                var card = hand[0];
+                toLay.Add(card);
+                hand.RemoveAt(0);
+            }
+            return toLay;
         }
 
-        //Защита от карт
-        //На вход подается набор карт на столе, часть из них могут быть уже покрыты
+        // Логика защиты
         public bool Defend(List<SCardPair> table)
         {
-            return false;
+            // Важно: table - это список структур. 
+            // Чтобы изменения сохранились, нужно менять элементы по индексу.
+            for (int i = 0; i < table.Count; i++)
+            {
+                if (!table[i].Beaten)
+                {
+                    SCard target = table[i].Down;
+                    // Ищем карту, которая побьет
+                    int foundIndex = hand.FindIndex(c => SCard.CanBeat(target, c, trumpSuit));
+
+                    if (foundIndex != -1)
+                    {
+                        SCard cover = hand[foundIndex];
+                        SCardPair updatedPair = table[i];
+                        updatedPair.SetUp(cover, trumpSuit);
+                        table[i] = updatedPair; // Перезаписываем структуру в списке
+                        hand.RemoveAt(foundIndex);
+                    }
+                    else
+                    {
+                        return false; // Нечем бить - забираем
+                    }
+                }
+            }
+            return true;
         }
-        //Добавление карт
-        //На вход подается набор карт на столе, а также отбился ли оппонент
+
         public bool AddCards(List<SCardPair> table, bool OpponentDefenced)
         {
+            // Для минимальной версии: никогда не подкидываем дополнительные карты
             return false;
         }
-        //Вызывается после основной битвы, когда известно отбился ли защищавшийся
-        //На вход подается набор карт на столе, а также была ли успешной защита
+
         public void OnEndRound(List<SCardPair> table, bool IsDefenceSuccesful)
         {
-
-        }
-        //Установка козыря, на вход подаётся козырь, вызывается перед первой раздачей карт
-        public void SetTrump(SCard NewTrump)
-        {
-            trumpSuit = NewTrump.Suit;
+            // Здесь можно очищать память или логировать, для игры не критично
         }
     }
 }
