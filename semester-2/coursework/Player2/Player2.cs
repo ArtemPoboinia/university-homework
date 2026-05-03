@@ -1,88 +1,216 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using System;
+﻿using System;
+using System.Collections.Generic;
 
 namespace CardFool
 {
-    // Убедитесь, что MPlayer2 выглядит идентично, только с другим именем класса
-    public class MPlayer2
+    public class MPlayer1
     {
-        private string Name = "Bot_1";
-        private List<SCard> hand = new List<SCard>();
-        private Suits trumpSuit;
+        private string _name = "Custom_V2";
+        private Dictionary<Suits, List<SCard>> _hand = new Dictionary<Suits, List<SCard>>();
+        private SCard _trump;
 
-        public string GetName() => Name;
-        public int GetCount() => hand.Count;
+        private List<SCard> _seen = new List<SCard>();
+        private List<SCard> _oppCards = new List<SCard>();
+        private int _deckCount = 24;
 
-        public void SetTrump(SCard NewTrump) => trumpSuit = NewTrump.Suit;
+        // Инициализация игрока
+        public MPlayer1() => Reset();
 
-        public void AddToHand(SCard card)
+        // Возвращает имя бота для движка
+        public string GetName() => _name;
+
+        // Считаем общее кол-во карт в руке по всем мастям
+        public int GetCount()
         {
-            hand.Add(card);
-            SortHand();
+            int total = 0;
+            foreach (var s in _hand.Values) total += s.Count;
+            return total;
         }
 
-        private void SortHand()
+        // Обнуление состояния перед новой партией
+        public void Reset()
         {
-            hand = hand.OrderBy(c => c.Suit == trumpSuit)
-                       .ThenBy(c => c.Rank)
-                       .ToList();
+            _hand.Clear();
+            _seen.Clear();
+            _oppCards.Clear();
+            _deckCount = 24;
         }
 
-        // Логика атаки
+        // Установка козыря и запоминание его в "вышедшие"
+        public void SetTrump(SCard t)
+        {
+            _trump = t;
+            _seen.Add(t);
+        }
+
+        // Добор карты: сортируем руку и обновляем память о колоде
+        public void AddToHand(SCard c)
+        {
+            _seen.Add(c);
+            _oppCards.RemoveAll(x => x.Suit == c.Suit && x.Rank == c.Rank);
+
+            if (!_hand.ContainsKey(c.Suit)) _hand[c.Suit] = new List<SCard>();
+            _hand[c.Suit].Add(c);
+            _hand[c.Suit].Sort((a, b) => a.Rank.CompareTo(b.Rank));
+
+            if (_deckCount > 0) _deckCount--;
+        }
+
+        // Логика первого хода: выбираем самую "дешевую" карту или пару
         public List<SCard> LayCards()
         {
-            var toLay = new List<SCard>();
-            // Если рука пуста, мы не можем атаковать, но по правилам AddCards 
-            // должен был дать нам карты. Если их нет - это конец игры.
-            if (hand.Count > 0)
-            {
-                var card = hand[0];
-                toLay.Add(card);
-                hand.RemoveAt(0);
-            }
-            return toLay;
-        }
+            SCard best = null;
+            double minWeight = double.MaxValue;
 
-        // Логика защиты
-        public bool Defend(List<SCardPair> table)
-        {
-            // Важно: table - это список структур. 
-            // Чтобы изменения сохранились, нужно менять элементы по индексу.
-            for (int i = 0; i < table.Count; i++)
+            foreach (var suit in _hand.Values)
             {
-                if (!table[i].Beaten)
+                foreach (var c in suit)
                 {
-                    SCard target = table[i].Down;
-                    // Ищем карту, которая побьет
-                    int foundIndex = hand.FindIndex(c => SCard.CanBeat(target, c, trumpSuit));
-
-                    if (foundIndex != -1)
+                    double w = GetWeight(c);
+                    if (w < minWeight)
                     {
-                        SCard cover = hand[foundIndex];
-                        SCardPair updatedPair = table[i];
-                        updatedPair.SetUp(cover, trumpSuit);
-                        table[i] = updatedPair; // Перезаписываем структуру в списке
-                        hand.RemoveAt(foundIndex);
-                    }
-                    else
-                    {
-                        return false; // Нечем бить - забираем
+                        minWeight = w;
+                        best = c;
                     }
                 }
+            }
+
+            if (best == null) return new List<SCard>();
+
+            var toPlay = new List<SCard>();
+            foreach (var s in _hand.Values)
+            {
+                for (int i = s.Count - 1; i >= 0; i--)
+                {
+                    if (s[i].Rank == best.Rank)
+                    {
+                        toPlay.Add(s[i]);
+                        s.RemoveAt(i);
+                    }
+                }
+            }
+            return toPlay;
+        }
+
+        // Логика защиты: ищем минимальные карты для отбоя или решаем взять
+        public bool Defend(List<SCardPair> table)
+        {
+            var myAll = new List<SCard>();
+            foreach (var s in _hand.Values) myAll.AddRange(s);
+
+            var solutions = new Dictionary<int, SCard>();
+            double totalCost = 0;
+
+            for (int i = 0; i < table.Count; i++)
+            {
+                if (table[i].Beaten) continue;
+
+                SCard target = table[i].Down;
+                SCard bestCover = null;
+                double bestCoverWeight = double.MaxValue;
+
+                foreach (var my in myAll)
+                {
+                    if (solutions.ContainsValue(my)) continue;
+
+                    if (SCard.CanBeat(target, my, _trump.Suit))
+                    {
+                        double w = GetWeight(my);
+                        if (w < bestCoverWeight)
+                        {
+                            bestCoverWeight = w;
+                            bestCover = my;
+                        }
+                    }
+                }
+
+                if (bestCover == null) return false;
+
+                solutions[i] = bestCover;
+                totalCost += bestCoverWeight;
+            }
+
+            // Если защита слишком дорогая по весам, выгоднее набрать карт
+            if (_deckCount > 5 && totalCost > 50)
+            {
+                if (GetCount() < 10) return false;
+            }
+
+            foreach (var kvp in solutions)
+            {
+                var p = table[kvp.Key];
+                p.SetUp(kvp.Value, _trump.Suit);
+
+
+                table[kvp.Key] = p;
+                RemoveFromHand(kvp.Value);
             }
             return true;
         }
 
-        public bool AddCards(List<SCardPair> table, bool OpponentDefenced)
+        // Подкидывание карт: только если они не слишком ценные
+        public bool AddCards(List<SCardPair> table, bool done)
         {
-            // Для минимальной версии: никогда не подкидываем дополнительные карты
+            if (done && _deckCount > 0) return false;
+
+            var onTable = new HashSet<int>();
+            foreach (var p in table)
+            {
+                onTable.Add(p.Down.Rank);
+                if (p.Beaten) onTable.Add(p.Up.Rank);
+            }
+
+            foreach (var suit in _hand.Values)
+            {
+                for (int i = 0; i < suit.Count; i++)
+                {
+                    if (onTable.Contains(suit[i].Rank) && GetWeight(suit[i]) < 20)
+                    {
+                        table.Add(new SCardPair(suit[i]));
+                        var c = suit[i];
+                        suit.RemoveAt(i);
+                        return true;
+                    }
+                }
+            }
             return false;
         }
 
-        public void OnEndRound(List<SCardPair> table, bool IsDefenceSuccesful)
+        // Анализ конца раунда: запоминаем, что ушло в бито, а что взял враг
+        public void OnEndRound(List<SCardPair> table, bool win)
         {
-            // Здесь можно очищать память или логировать, для игры не критично
+            foreach (var p in table)
+            {
+                _seen.Add(p.Down);
+                if (p.Beaten) _seen.Add(p.Up);
+                else _oppCards.Add(p.Down);
+            }
+        }
+
+        // Расчет веса карты: учитывает ранг, козырь и наличие пар в руке
+        private double GetWeight(SCard c)
+        {
+            double w = c.Rank;
+            if (c.Suit == _trump.Suit) w += 15;
+
+            if (_deckCount == 0 && c.Suit == _trump.Suit) w *= 2;
+
+            int count = 0;
+            foreach (var s in _hand.Values)
+                foreach (var card in s) if (card.Rank == c.Rank) count++;
+
+            if (count > 1) w += 5;
+
+            return w;
+        }
+
+        // Служебный метод для чистки руки после хода
+        private void RemoveFromHand(SCard c)
+        {
+            if (_hand.ContainsKey(c.Suit))
+            {
+                _hand[c.Suit].RemoveAll(x => x.Rank == c.Rank && x.Suit == c.Suit);
+            }
         }
     }
 }

@@ -29,7 +29,7 @@ namespace PCFindSimilar
         {
             List<string> surnames = new List<string>();
             List<string> names = new List<string>();
-            List<string> patronymics =  new List<string>();
+            List<string> patronymics = new List<string>();
 
             for (int i = 0; i < size; i++)
             {
@@ -95,14 +95,14 @@ namespace PCFindSimilar
 
         static void Main(string[] args)
         {
-            int[] sizes = {10, 50, 100, 200, 500, 1000};
+            int[] sizes = { 10, 50, 100, 200, 500, 1000 };
 
             foreach (int size in sizes)
             {
                 for (int i = 0; i < 10; i++)
                 {
                     Console.WriteLine($"--- Тестирование производительности (N={size}) ---");
-                
+
                     SHuman[] group = CreateNewSHumanArray(size);
                     Stopwatch sw = new Stopwatch();
 
@@ -123,6 +123,7 @@ namespace PCFindSimilar
                 }
             }
             Console.WriteLine("Тесты завершены. Файлы созданы.");
+            Console.ReadKey();
         }
     }
 }
