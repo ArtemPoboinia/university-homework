@@ -10,6 +10,13 @@ class Program
         string text = Console.ReadLine();
         string word = Console.ReadLine();
 
+        bool result = MakeUpWord(text, word);
+
+        Console.WriteLine(result);
+    }
+
+    public static bool MakeUpWord(string text, string word)
+    {
         Dictionary<char, int> textLetterCount = new Dictionary<char, int>();
         Dictionary<char, int> wordLetterCount = new Dictionary<char, int>();
 
@@ -52,6 +59,6 @@ class Program
             }
         }
 
-        Console.WriteLine(canFormWord);
+        return canFormWord;
     }
 }
