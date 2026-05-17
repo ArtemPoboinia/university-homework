@@ -1,12 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 
 namespace CardFool
 {
     public class MPlayer1
     {
-        private string Name = "Minimax_Prime";
+        private string Name = "Poboinia A A";
         private Dictionary<Suits, SortedSet<SCard>> hand = new Dictionary<Suits, SortedSet<SCard>>();
         private SCard trump;
 
@@ -29,7 +28,7 @@ namespace CardFool
         public string GetName() => Name;
 
         // Возвращает количество карт в руке.
-        public int GetCount() => hand.Values.Sum(set => set.Count);
+        public int GetCount() => hand.Count;
 
         // Устанавливает козырную масть.
         public void SetTrump(SCard NewTrump)
