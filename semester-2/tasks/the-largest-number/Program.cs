@@ -1,20 +1,45 @@
-﻿// Побойня Артём 5130903-50002
+﻿using System;
+using System.Globalization;
 
-using System;
-
-class Program
+public class Program
 {
-    public static void Main(string[] args)
+    public static double FindMaxNumber(string input)
     {
-        string text = Console.ReadLine();
-        double result = FindTheLargestNumbers(text);
+        double max = 0;
+        string current = "";
 
-        Console.WriteLine(result);
+        foreach (char c in input)
+        {
+            if (char.IsDigit(c) || c == ',')
+            {
+                current += c;
+            }
+            else if (current != "")
+            {
+                double num;
+                if (double.TryParse(current.Trim(','), NumberStyles.Any, new CultureInfo("ru-RU"), out num))
+                {
+                    if (num > max) max = num;
+                }
+                current = "";
+            }
+        }
+
+        if (current != "")
+        {
+            double num;
+            if (double.TryParse(current.Trim(','), NumberStyles.Any, new CultureInfo("ru-RU"), out num))
+            {
+                if (num > max) max = num;
+            }
+        }
+
+        return max;
     }
 
-    public static double FindTheLargestNumbers(string text)
+    public static void Main()
     {
-        double theLargesNumbers;
-        return 0;
+        string input = Console.ReadLine();
+        Console.WriteLine(FindMaxNumber(input));
     }
 }
