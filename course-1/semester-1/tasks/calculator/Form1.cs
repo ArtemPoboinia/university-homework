@@ -2,7 +2,7 @@ namespace calculator
 {
     public partial class Calculator : Form
     {
-        // Задание переменных
+        // пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
         private double firstNumber = 0;
         private double secondNumber = 0;
         private string currentOperator = "";
@@ -14,14 +14,14 @@ namespace calculator
             InitializeComponent();
             tbOutput.Text = "0";
 
-            // Убрал фокус с текстового поля на clear
+            // пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅ clear
             this.Shown += (s, e) =>
             {
                 btnClear.Focus();
             };
         }
 
-        // Функция добавления цифры
+        // пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
         private void AddDigit(string digit)
         {
             if (isNewCalculation || tbOutput.Text == "0")
@@ -35,7 +35,7 @@ namespace calculator
             }
         }
 
-        // Функция установки оператора
+        // пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
         private void SetOperator(string op)
         {
             if (tbOutput.Text == "Error")
@@ -61,7 +61,7 @@ namespace calculator
             }
         }
 
-        // Функция вычисления результата
+        // пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
         private void CalculateResult()
         {
             if (string.IsNullOrEmpty(currentOperator) ||
@@ -103,7 +103,7 @@ namespace calculator
             isNewCalculation = false;
         }
 
-        // Функция сброса
+        // пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
         private void ClearAll()
         {
             tbOutput.Text = "0";
@@ -115,7 +115,7 @@ namespace calculator
             hasDecimalPoint = false;
         }
 
-        // Функция добавления ,
+        // пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ ,
         private void AddDecimalPoint()
         {
             if (!hasDecimalPoint)
@@ -133,7 +133,7 @@ namespace calculator
             }
         }
 
-        // Функции взаимодействий с кнопками
+        // пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
         private void btn1_Click(object sender, EventArgs e)
         {
             AddDigit("1");
